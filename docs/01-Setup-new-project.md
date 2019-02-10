@@ -27,7 +27,7 @@ This will allow us writting code using ES, babel will convert the ES into equiva
   npm install @babel/register --save-dev
   ```
   * .babelrc - create the file to configure babel
-  
+
 * Eslint - [getting started](https://eslint.org/docs/user-guide/getting-started)
 ```bash
 npm install eslint --save-dev
@@ -49,9 +49,13 @@ npm install --save-dev cross-env
 ```bash
 npm install --save-dev mocha
 ```
-* [Chai](npm install chai) is the assertion library that we will be use
+* [Chai](https://www.chaijs.com/) is the assertion library that we will be use
 ```bash
 npm install --save-dev chai
+```
+* [istanbul](https://istanbul.js.org/)
+```bash
+npm install --save-dev nyc
 ```
 
 ## Scripts

@@ -1,7 +1,7 @@
 {
-  "name": "algorithms",
+  "name": "js-scratchpad",
   "version": "1.0.0",
-  "description": "NodeJS algorithms",
+  "description": "NodeJS scratchpad",
   "main": "index.js",
   "scripts": {
     "prettier": "prettier --write ./src/**/*.js",
@@ -11,20 +11,20 @@
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,coverage",
     "start": " npm run prettier && npm run lint && npm run build && cross-env NODE_ENV=production node dist/app.js",
     "start-dev": " npm run prettier && npm run lint && npm run build && cross-env NODE_ENV=dev node dist/app.js",
-    "test": "npm run prettier && npm run lint:write && cross-env NODE_ENV=test mocha --require @babel/register src/**/*.test.js --recursive",
     "test-one": "npm run prettier && npm run lint:write && cross-env NODE_ENV=test mocha --require @babel/register src/**/*.test.js --recursive -g <NAME_OF_THE_TEST>",
-    "test-coverage": "npm run lint && cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha --require @babel/register src/**/*.test.js --recursive"
+    "test-coverage": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha --require @babel/register src/**/*.test.js --recursive",
+    "test": "npm run prettier && npm run lint:write && cross-env NODE_ENV=test mocha --require @babel/register src/**/*.test.js --recursive && npm run test-coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandeepkesarkar/algorithms.git"
+    "url": "git+https://github.com/sandeepkesarkar/JS-scratchpad.git"
   },
   "author": "Sandeep Kesarkar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sandeepkesarkar/algorithms/issues"
+    "url": "https://github.com/sandeepkesarkar/JS-scratchpad/issues"
   },
-  "homepage": "https://github.com/sandeepkesarkar/algorithms#readme",
+  "homepage": "https://github.com/sandeepkesarkar/JS-scratchpad#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -34,6 +34,7 @@
     "cross-env": "^5.2.0",
     "eslint": "^5.13.0",
     "mocha": "^5.2.0",
+    "nyc": "^13.2.0",
     "prettier": "1.16.4",
     "rimraf": "^2.6.3"
   },
