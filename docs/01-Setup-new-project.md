@@ -53,9 +53,21 @@ npm install --save-dev mocha
 ```bash
 npm install --save-dev chai
 ```
-* [istanbul](https://istanbul.js.org/)
+* [istanbul](https://istanbul.js.org/) - code coverage library
 ```bash
 npm install --save-dev nyc
+```
+* [config](https://github.com/lorenwest/node-config) - for managing configs across multiple environments
+```bash
+npm install config
+```
+* [winston](https://github.com/winstonjs/winston) - for logging
+```bash
+npm install winston
+```
+* [winston-daily-rotate-file](winston-daily-rotate-file) - for log file management
+```bash
+npm install winston-daily-rotate-file
 ```
 
 ## Scripts
@@ -69,8 +81,8 @@ Scripts will help us run a particular npm command as specified in `Scripts` sect
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,coverage",
     "start": " npm run prettier && npm run lint && npm run build && cross-env NODE_ENV=production node dist/app.js",
     "start-dev": " npm run prettier && npm run lint && npm run build && cross-env NODE_ENV=dev node dist/app.js",
-    "test": "npm run prettier && npm run lint:write && cross-env NODE_ENV=test mocha --require babel-register src/**/*.test.js --recursive",    
-    "test-one": "npm run prettier && npm run lint:write && cross-env NODE_ENV=test mocha --require babel-register src/**/*.test.js --recursive -g <NAME_OF_THE_TEST>",
-    "test-coverage": "npm run lint && cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha --require babel-register src/**/*.test.js --recursive"
+    "test-one": "npm run prettier && npm run lint:write && cross-env NODE_ENV=test mocha --require @babel/register src/**/*.test.js --recursive -g <NAME_OF_THE_TEST>",
+    "test-coverage": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha --require @babel/register src/**/*.test.js --recursive",
+    "test": "npm run prettier && npm run lint:write && cross-env NODE_ENV=test mocha --require @babel/register src/**/*.test.js --recursive && npm run test-coverage"
   },
 ```

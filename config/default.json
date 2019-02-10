@@ -1,0 +1,8 @@
+{
+  "appName": "js-scratchpad",
+  "logging": {
+    "errorFile": "./logs/js-scratchpad-ERROR_%DATE%.log",
+    "infoFile": "./logs/js-scratchpad-INFO_%DATE%.log",
+    "debugFile": "./logs/js-scratchpad-DEBUG_%DATE%.log"
+  }
+}
