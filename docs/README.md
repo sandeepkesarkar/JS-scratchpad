@@ -1,7 +1,7 @@
-These are notes maintained about stuff related to JavaScript
-
-The docs folder has all the notes that might be helpful
+These are notes and code that are helpful to write Node.JS applications
 
 Happy coding!!!
 
-[01-Setup-new-project](https://sandeepkesarkar.github.io/JS-scratchpad/01-Setup-new-project)
+# Index
+
+* [Setting up new project](https://sandeepkesarkar.github.io/JS-scratchpad/01-Setup-new-project)
