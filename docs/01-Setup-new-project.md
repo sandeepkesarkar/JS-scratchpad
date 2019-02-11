@@ -1,4 +1,4 @@
-[Index Page](https://sandeepkesarkar.github.io/JS-scratchpad/)
+[Index Page](README.md)
 
 # How to setup a brand new Node.js project
 Here we will talk about just creating a standalong Node.JS scripts project which will support ES, automated testing, linting and logging. 

@@ -4,4 +4,4 @@ Happy coding!!!
 
 # Index
 
-* [Setting up new project](https://sandeepkesarkar.github.io/JS-scratchpad/01-Setup-new-project)
+* [Setting up new project](01-Setup-new-project.md)
