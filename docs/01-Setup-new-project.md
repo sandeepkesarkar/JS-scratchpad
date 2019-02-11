@@ -1,3 +1,5 @@
+[Index Page](https://sandeepkesarkar.github.io/JS-scratchpad/)
+
 # How to setup a brand new Node.js project
 Here we will talk about just creating a standalong Node.JS scripts project which will support ES, automated testing, linting and logging. 
 The configuration could be used for any Node.JS project to get up and running. 
